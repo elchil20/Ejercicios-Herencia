@@ -2,6 +2,9 @@ public class Circulo {
     private double radio;
 
     public Circulo(double radio) {
+        if (radio < 0) {
+            radio = 0;
+        }
         this.radio = radio;
     }
 
@@ -10,9 +13,7 @@ public class Circulo {
     }
 
     public double getRadio() {
-        if (radio < 0) {
-            radio = 0;
-        }
+
         return radio;
     }
 
@@ -45,7 +46,7 @@ public class Circulo {
     }
         public static void main(String[] args) {
             Circulo circulo = new Circulo(4);
-            Cilindro cilindro = new Cilindro (3, 5);
+            Cilindro cilindro = new Cilindro (5, 1);
             System.out.println("Este es el radio de tu circulo: " + circulo.getRadio());
             System.out.println("El area de tu circulo es: " + circulo.getArea());
             System.out.println("La altura de tu cilindro es: " + cilindro.getAltura());
